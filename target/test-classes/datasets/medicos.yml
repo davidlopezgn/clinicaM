@@ -1,0 +1,48 @@
+medico: 
+  - MedicoId: 1
+    Nombre: "Médico1"
+    Apellido: "aa"
+    Especialidad: "Neurología"
+    Cedula: "11111111"
+  - MedicoId: 2
+    Nombre: "Médico2"
+    Apellido: "bb"
+    Especialidad: "Nutriología"
+    Cedula: "22222222"
+  - MedicoId: 3
+    Nombre: "Médico3"
+    Apellido: "cc"
+    Especialidad: "Pediatría"
+    Cedula: "33333333"
+  - MedicoId: 4
+    Nombre: "Médico4"
+    Apellido: "dd"
+    Especialidad: "Psiquiatría"
+    Cedula: "44444444"
+
+agenda:
+  - AgendaId: 1
+  - AgendaId: 2
+  - AgendaId: 3
+  - AgendaId: 4
+
+plan:
+  - PlanId: 1
+    Tipo: "PorHora"
+    Costo: "40.00"
+  - PlanId: 2
+    Tipo: "Semanal"
+    Costo: "500.00"
+
+contrato:
+  - ContratoId: 1
+    FechaInicial: "01/10/2020"
+    FechaFinal: "01/10/2020"
+    medico_id: 1
+    plan_id: 1
+  - ContratoId: 2
+    FechaInicial: "01/10/2020"
+    FechaFinal: "08/10/2020"
+    medico_id: 2
+    plan_id: 2
+    
