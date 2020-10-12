@@ -96,6 +96,9 @@ public class Medico {
 
 	@Override
 	public String toString() {
+		/*return "Medico@: [id:" +this.getId()+
+				", : name : "+this.getName()+
+				"]";*/
 		return "Medico [getId()=" + this.getId() + ", getName()=" + this.getName() + ", getLastName()=" + this.getLastName()
 				+ ", getSpeciality()=" + this.getSpeciality() + ", getLicense()=" + this.getLicense() + ", getContratos()="
 				+ this.getContratos() + ", getAgenda()=" + this.getAgenda() + "]";
