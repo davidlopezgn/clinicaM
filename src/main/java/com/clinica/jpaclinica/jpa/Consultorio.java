@@ -1,10 +1,14 @@
 package com.clinica.jpaclinica.jpa;
 
+import java.util.Collection;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 @Entity
 public class Consultorio {
 	@Id
@@ -17,6 +21,9 @@ public class Consultorio {
 	private String estado;
 	@Column(name="Tipo")
 	private String tipo;
+	
+	@OneToMany(mappedBy="consultorio", cascade = CascadeType.ALL)
+	private Collection<Reservacion> reservaciones;
 	//Constructor
 			public Consultorio() {
 				super();

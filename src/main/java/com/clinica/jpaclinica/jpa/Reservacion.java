@@ -36,6 +36,10 @@ public class Reservacion {
 	@JoinColumn(name = "paciente_id")//llave foranea que recibe de paciente
 	private Paciente paciente;//crea objeto paciente
 	
+	@ManyToOne
+	@JoinColumn(name = "consultorio_id")//llave foranea que recibe de paciente
+	private Consultorio consultorios;//crea objeto paciente
+	
 	
 	//---------------------------Constructors------------------------------
 	

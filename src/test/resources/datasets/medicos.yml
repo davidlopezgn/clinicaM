@@ -71,5 +71,11 @@ paciente:
   - PacienteId: 1
     Nombre: "Juan"
     Direccion: "Priv.113 a Oriente"
-    Correo: "j.pll"hotmail.com"
+    Correo: "j.pllhotmail.com"
     Telefono: "2224654307"
+
+consultorio
+  - ConsultorioId: 1
+    Ubicacion: Torre Norte"
+    Estado: "Remodelacion"
+    Tipo: "Ortodoncia"
