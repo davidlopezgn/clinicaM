@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
@@ -31,10 +32,14 @@ public class Medico {
 	private String license;
 	
 	@OneToOne
+	@JoinColumn(name="agenda_id")
 	private Agenda agenda;
 	
 	@OneToMany(mappedBy="medico", cascade = CascadeType.ALL)
 	private Collection<Contrato> contratos;
+	
+	@OneToOne(mappedBy = "medico")
+	private Reservacion reservacion;
 	
 	public Medico() { super(); }
 
@@ -98,7 +103,7 @@ public class Medico {
 	public String toString() {
 		return "Medico [getId()=" + this.getId() + ", getName()=" + this.getName() + ", getLastName()=" + this.getLastName()
 				+ ", getSpeciality()=" + this.getSpeciality() + ", getLicense()=" + this.getLicense() + ", getContratos()="
-				+ this.getContratos() + ", getAgenda()=" + this.getAgenda() + "]";
+				+ this.getContratos() + ", getAgenda()= " + this.getAgenda() + "]";
 	}
 	
 	

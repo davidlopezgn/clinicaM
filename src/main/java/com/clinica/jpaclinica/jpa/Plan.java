@@ -24,6 +24,9 @@ public class Plan {
 	
 	@OneToMany(mappedBy = "plan", cascade = CascadeType.ALL)
 	private Collection<Contrato> contratos;
+	
+	@OneToMany(mappedBy = "plan", cascade = CascadeType.ALL)
+	private Collection<Recibo> recibos;
 
 	public Plan() { super();}
 	

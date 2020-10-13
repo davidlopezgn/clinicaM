@@ -1,10 +1,15 @@
 package com.clinica.jpaclinica.jpa;
 
+import java.util.Collection;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Recibo {
@@ -16,14 +21,16 @@ public class Recibo {
 	@Column(name="Fecha")
 	private String fecha;
 	@Column(name="Monto")
-	private String monto;
+	private Float monto;
 	@Column(name="Periodo")
 	private String periodo;
 	
-	@Column(name="Medico")
+	@ManyToOne
+	@JoinColumn(name="medico_id")
 	private Medico medico;
 	
-	@Column(name="Plan")
+	@ManyToOne
+	@JoinColumn(name="plan_id")
 	private Plan plan;
 	
 	
@@ -55,12 +62,12 @@ public class Recibo {
 	}
 
 
-	public String getMonto() {
+	public Float getMonto() {
 		return monto;
 	}
 
 
-	public void setMonto(String monto) {
+	public void setMonto(Float monto) {
 		this.monto = monto;
 	}
 

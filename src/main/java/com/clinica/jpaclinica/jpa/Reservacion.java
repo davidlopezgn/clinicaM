@@ -5,6 +5,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Reservacion {
@@ -18,12 +21,16 @@ public class Reservacion {
 	@Column(name="Tiempo") 			 //Duración de la consulta
 	private String tiempo; 
 	
-	@Column(name="Medico")
+	@OneToOne
+	@JoinColumn(name="medico_id")
 	private Medico medico;
 
 	@Column(name="Consultorio")
 	private String consultorio;		 // private Consultorio consultorio;
 
+	@ManyToOne
+	@JoinColumn(name = "agenda_id")
+	private Agenda agenda;
 	
 	//---------------------------Constructors------------------------------
 	
