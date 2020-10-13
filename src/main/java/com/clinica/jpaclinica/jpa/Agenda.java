@@ -19,12 +19,13 @@ public class Agenda {
 	@Column(name="AgendaId")
 	private Long id;
 	
-	@OneToOne(mappedBy = "agenda")
+	@OneToOne
+	@JoinColumn(name="medico_id")
 	private Medico medico;
 	
 	@OneToMany(mappedBy = "agenda")
 	private Collection<Reservacion> reservaciones;
-	
+
 	public Agenda() {
 		super();
 	}
@@ -46,7 +47,4 @@ public class Agenda {
 	public String toString() {
 		return "Agenda [getId()=" + this.getId() + "]";
 	}
-	
-	
-	
 }

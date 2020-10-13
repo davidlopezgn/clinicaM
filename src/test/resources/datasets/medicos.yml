@@ -1,84 +1,31 @@
-agenda:
-  - AgendaId: 1
-  - AgendaId: 2
-  - AgendaId: 3
-  - AgendaId: 4
-
 medico: 
   - MedicoId: 1
     Nombre: "Médico1"
     Apellido: "aa"
     Especialidad: "Neurología"
     Cedula: "11111111"
-    agenda_id: 1
   - MedicoId: 2
     Nombre: "Médico2"
     Apellido: "bb"
     Especialidad: "Nutriología"
     Cedula: "22222222"
-    agenda_id: 2
   - MedicoId: 3
     Nombre: "Médico3"
     Apellido: "cc"
     Especialidad: "Pediatría"
     Cedula: "33333333"
-    agenda_id: 3
   - MedicoId: 4
     Nombre: "Médico4"
     Apellido: "dd"
     Especialidad: "Psiquiatría"
     Cedula: "44444444"
-    agenda_id: 4
 
-plan:
-  - PlanId: 1
-    Tipo: "PorHora"
-    Costo: "40.00"
-  - PlanId: 2
-    Tipo: "Semanal"
-    Costo: "500.00"
-
-contrato:
-  - ContratoId: 1
-    FechaInicial: "13/10/2020"
-    FechaFinal: "13/10/2020"
+agenda:
+  - AgendaId: 1
     medico_id: 1
-    plan_id: 1
-  - ContratoId: 2
-    FechaInicial: "01/10/2020"
-    FechaFinal: "08/10/2020"
+  - AgendaId: 2
     medico_id: 2
-    plan_id: 2
-
-reservacion:
-  - ReservacionId: 1
-    FechaHora: "13 de Octubre de 2020 - 15:00"
-    Tiempo: "2 horas"
-    Consultorio: "1"
-    medico_id: 1
-    agenda_id: 1
-    paciente_id: 1
-    consultorio_id: 1
-
-recibo:
-  - Folio: 1
-    Fecha: "13/10/2020"
-    Monto: 80.00
-    Periodo: "2 horas"
-    medico_id: 1
-    plan_id: 1
-
-paciente:
-  - PacienteId: 1
-    Nombre: "Juan"
-    Direccion: "Priv.113 a Oriente"
-    Correo: "j.pllhotmail.com"
-    Telefono: "2224654307"
-
-consultorio:
-  - ConsultorioId: 1
-    Ubicacion: "Torre Norte"
-    Estado: "Remodelacion"
-    Tipo: "Ortodoncia"
-    Correo: "j.pll@hotmail.com"
-    Telefono: "2224654307"
+  - AgendaId: 3
+    medico_id: 3
+  - AgendaId: 4
+    medico_id: 4

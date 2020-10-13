@@ -9,7 +9,7 @@
     	res-type="javax.sql.DataSource"
     	datasource-classname="com.mysql.cj.jdbc.MysqlDataSource">
       <property name="user" value="tester"></property>
-	  <property name="password" value="1nt3m3zz0"></property>
+	  <property name="password" value="060997"></property>
       <property name="databaseName" value="unit_testing"></property>
       <property name="serverName" value="localhost"></property>
       <property name="portNumber" value="3306"></property>

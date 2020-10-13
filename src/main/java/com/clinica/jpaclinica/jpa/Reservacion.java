@@ -20,13 +20,6 @@ public class Reservacion {
 	private String fechaHora;
 	@Column(name="Tiempo") 			 //Duración de la consulta
 	private String tiempo; 
-	
-	@OneToOne
-	@JoinColumn(name="medico_id")
-	private Medico medico;
-
-	@Column(name="Consultorio")
-	private String numconsultorio;		 // private Consultorio consultorio;
 
 	@ManyToOne
 	@JoinColumn(name = "agenda_id")
@@ -74,28 +67,19 @@ public class Reservacion {
 		this.tiempo = tiempo;
 	}
 
-	public Medico getMedico() {
-		return medico;
+	public Consultorio getConsultorio() {
+		return consultorio;
 	}
 
-	public void setMedico(Medico medico) {
-		this.medico = medico;
-	}
-
-	public String getConsultorio() {
-		return numconsultorio;
-	}
-
-	public void setConsultorio(String numconsultorio) {
-		this.numconsultorio = numconsultorio;
+	public void setConsultorio(Consultorio consultorio) {
+		this.consultorio = consultorio;
 	}
 	
 	//-------------------------Methods----------------------------
 	@Override
 	public String toString() {
 		return "Reservacion [getId()=" + this.getId() 
-				+ ", getFechaHora()=" + this.getFechaHora()
-				+ ", getMedico()=" + this.getMedico().getName() 
+				+ ", getFechaHora()=" + this.getFechaHora() 
 				+ ", getConsultorio()=" + this.getConsultorio() 
 				+ ", getTiempo()=" + this.getTiempo();
 	}

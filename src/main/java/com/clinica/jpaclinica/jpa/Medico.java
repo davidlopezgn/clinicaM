@@ -31,15 +31,11 @@ public class Medico {
 	@Column(name="Cedula")
 	private String license;
 	
-	@OneToOne
-	@JoinColumn(name="agenda_id")
+	@OneToOne(mappedBy = "medico")
 	private Agenda agenda;
 	
 	@OneToMany(mappedBy="medico", cascade = CascadeType.ALL)
 	private Collection<Contrato> contratos;
-	
-	@OneToOne(mappedBy = "medico")
-	private Reservacion reservacion;
 	
 	@OneToMany(mappedBy = "medico", cascade = CascadeType.ALL)
 	private Collection<Recibo> recibos;
