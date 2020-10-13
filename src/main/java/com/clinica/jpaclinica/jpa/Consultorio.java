@@ -17,6 +17,11 @@ public class Consultorio {
 	private String estado;
 	@Column(name="Tipo")
 	private String tipo;
+	//Constructor
+			public Consultorio() {
+				super();
+			}
+
 	public Long getId() {
 		return id;
 	}

@@ -1,16 +1,20 @@
 package com.clinica.jpaclinica.jpa;
 
 
+import java.util.Collection;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 @Entity
 public class Paciente {
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Id//generar llave primaria de la entidad
+	@GeneratedValue(strategy=GenerationType.AUTO)//generar automaticamete auto increment
 	@Column(name="PacienteId")
 	private Long id;
 	@Column(name="Nombre")
@@ -21,7 +25,14 @@ public class Paciente {
 	private String correo;
 	@Column(name="Telefono")
 	private String telefono;
-
+	
+	@OneToMany(mappedBy="paciente", cascade = CascadeType.ALL)//mappedBy="paciente" se crea objeto paciente en reservacion
+	private Collection<Reservacion> recervaciones;//Collection<"nombre de clase">
+	
+	//Constructor
+		public Paciente() {
+			super();
+		}
 
 	public Long getId() {
 		return id;

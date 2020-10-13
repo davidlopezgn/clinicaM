@@ -32,6 +32,11 @@ public class Reservacion {
 	@JoinColumn(name = "agenda_id")
 	private Agenda agenda;
 	
+	@ManyToOne
+	@JoinColumn(name = "paciente_id")//llave foranea que recibe de paciente
+	private Paciente paciente;//crea objeto paciente
+	
+	
 	//---------------------------Constructors------------------------------
 	
 	public Reservacion() {

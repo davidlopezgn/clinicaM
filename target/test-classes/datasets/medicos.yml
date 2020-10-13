@@ -57,6 +57,7 @@ reservacion:
     Consultorio: "1"
     medico_id: 1
     agenda_id: 1
+    paciente_id: 1
 
 recibo:
   - Folio: 1
@@ -66,3 +67,9 @@ recibo:
     medico_id: 1
     plan_id: 1
     
+paciente:
+  - PacienteId: 1
+    Nombre: "Juan"
+    Direccion: "Priv.113 a Oriente"
+    Correo: "j.pll"hotmail.com"
+    Telefono: "2224654307"
