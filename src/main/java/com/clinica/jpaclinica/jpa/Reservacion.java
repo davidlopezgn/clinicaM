@@ -26,7 +26,7 @@ public class Reservacion {
 	private Medico medico;
 
 	@Column(name="Consultorio")
-	private String consultorio;		 // private Consultorio consultorio;
+	private String consultorios;		 // private Consultorio consultorio;
 
 	@ManyToOne
 	@JoinColumn(name = "agenda_id")
@@ -37,8 +37,8 @@ public class Reservacion {
 	private Paciente paciente;//crea objeto paciente
 	
 	@ManyToOne
-	@JoinColumn(name = "consultorio_id")//llave foranea que recibe de paciente
-	private Consultorio consultorios;//crea objeto paciente
+	@JoinColumn(name = "consultorio_id")
+	private Consultorio consultorio;
 	
 	
 	//---------------------------Constructors------------------------------
@@ -83,11 +83,11 @@ public class Reservacion {
 	}
 
 	public String getConsultorio() {
-		return consultorio;
+		return consultorios;
 	}
 
-	public void setConsultorio(String consultorio) {
-		this.consultorio = consultorio;
+	public void setConsultorio(String consultorios) {
+		this.consultorios = consultorios;
 	}
 	
 	//-------------------------Methods----------------------------
