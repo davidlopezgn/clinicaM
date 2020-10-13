@@ -66,11 +66,12 @@ recibo:
     Periodo: "2 horas"
     medico_id: 1
     plan_id: 1
-    
+
 paciente:
   - PacienteId: 1
     Nombre: "Juan"
     Direccion: "Priv.113 a Oriente"
+<<<<<<< HEAD
     Correo: "j.pllhotmail.com"
     Telefono: "2224654307"
 
@@ -79,3 +80,8 @@ consultorio
     Ubicacion: Torre Norte"
     Estado: "Remodelacion"
     Tipo: "Ortodoncia"
+=======
+    Correo: "j.pll@hotmail.com"
+    Telefono: "2224654307"
+  
+>>>>>>> branch '6_entidades' of https://github.com/davidlopezgn/clinicaM.git

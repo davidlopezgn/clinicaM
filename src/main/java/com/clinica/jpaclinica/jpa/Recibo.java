@@ -2,6 +2,7 @@ package com.clinica.jpaclinica.jpa;
 
 import java.util.Collection;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

@@ -41,6 +41,9 @@ public class Medico {
 	@OneToOne(mappedBy = "medico")
 	private Reservacion reservacion;
 	
+	@OneToMany(mappedBy = "medico", cascade = CascadeType.ALL)
+	private Collection<Recibo> recibos;
+	
 	public Medico() { super(); }
 
 	public Long getId() {
