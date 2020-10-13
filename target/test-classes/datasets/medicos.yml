@@ -75,9 +75,9 @@ paciente:
     Correo: "j.pllhotmail.com"
     Telefono: "2224654307"
 
-consultorio
+consultorio:
   - ConsultorioId: 1
-    Ubicacion: Torre Norte"
+    Ubicacion: "Torre Norte"
     Estado: "Remodelacion"
     Tipo: "Ortodoncia"
     Correo: "j.pll@hotmail.com"

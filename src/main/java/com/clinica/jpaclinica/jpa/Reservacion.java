@@ -26,7 +26,7 @@ public class Reservacion {
 	private Medico medico;
 
 	@Column(name="Consultorio")
-	private String consultorios;		 // private Consultorio consultorio;
+	private String numconsultorio;		 // private Consultorio consultorio;
 
 	@ManyToOne
 	@JoinColumn(name = "agenda_id")
@@ -83,11 +83,11 @@ public class Reservacion {
 	}
 
 	public String getConsultorio() {
-		return consultorios;
+		return numconsultorio;
 	}
 
-	public void setConsultorio(String consultorios) {
-		this.consultorios = consultorios;
+	public void setConsultorio(String numconsultorio) {
+		this.numconsultorio = numconsultorio;
 	}
 	
 	//-------------------------Methods----------------------------
